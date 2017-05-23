@@ -1,0 +1,9 @@
+# Zabbix Get Image Chart whit wget
+
+### [wget get Chart Zabbix stackoverflow](https://stackoverflow.com/questions/13653853/zabbix-to-export-graph-png-files# "Chart")
+#### [1] Login
+``wget --save-cookies=cookie.coo -4 --keep-session-cookies -O - -S --post-data='name=usename&password=password&enter=Sign in&autologin=1&request=' 'http://127.0.0.1:80/index.php?login=1'``
+#### [2] Get image
+``wget -4 --load-cookies=cookie.coo -O result.png 'http://127.0.0.1:80/chart.php?period=385&stime=20170522112858&itemids=25436&type=0&updateProfile=1&profileIdx=web.item.graph&profileIdx2=25436&width=1302'``
+# Run
+``python zabbix_get_img_chart.py``
